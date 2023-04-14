@@ -1,3 +1,4 @@
+import numpy as np
 import skrf as rf
 
 
@@ -30,5 +31,18 @@ class Introduction:
         print(line.frequency)
         first_ten_frequencies = line.f[0:10]
         print(first_ten_frequencies)
+
+        rs_s21_mag = ring_slot.s_mag[:, 1, 0]
+        print(rs_s21_mag)
+        print(rs_s21_mag.min())
+        print(rs_s21_mag.max())
+
+        rs_s11_mag = ring_slot.s_mag[:, 0, 0]
+        print(rs_s11_mag)
+
+        freq_index = np.argmin(rs_s11_mag)
+        freq_rs_s11_mag_min = ring_slot.f[freq_index]
+        print(freq_rs_s11_mag_min)
+        print(rs_s11_mag[freq_index])
 
         return
