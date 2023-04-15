@@ -35,7 +35,9 @@ class Beginner:
         self.fig.show()
 
     def show_as_image(self):
+        self.Z = np.random.uniform(0, 1, (8, 8))
         self.ax.clear()
+        self.ax.imshow(self.Z)
         self.fig.show()
 
     def filled_contour(self):
