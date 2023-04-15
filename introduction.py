@@ -49,8 +49,10 @@ class Introduction:
 
         rf.stylely()
         # ring_slot.plot_s_db()
-        ring_slot.plot_s_deg(m=0, n=1)
-        # ring_slot.plot_s_smith(lw=2)
+        # ring_slot.plot_s_deg(m=0, n=1)
+        ring_slot.plot_s_smith(lw=2)
+        plt.title('Smith Chart')
+        plt.text(0.5, 1.0, 'Smith Chart')
         save_all_figs()
 
         return
