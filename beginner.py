@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 class Beginner:
     def __init__(self):
+        self.ax = None
+        self.fig = None
         self.X = None
         self.Y = None
         self.Z = None
@@ -11,16 +13,19 @@ class Beginner:
     def prepare(self):
         self.X = np.linspace(0, 4 * np.pi, 1000)
         self.Y = np.sin(self.X)
-        return
 
     def render(self):
-        fig, ax = plt.subplots()
-        ax.plot(self.X, self.Y)
-        fig.show()
-        return
+        self.fig, self.ax = plt.subplots()
+        self.ax.clear()
+        self.ax.plot(self.X, self.Y)
+        self.fig.show()
 
     def scatter(self):
-        pass
+        self.X = np.random.uniform(0, 1, 100)
+        self.Y = np.random.uniform(0, 1, 100)
+        self.ax.clear()
+        self.ax.scatter(self.X, self.Y)
+        self.fig.show()
 
     def bar(self):
         pass
