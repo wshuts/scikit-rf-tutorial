@@ -23,4 +23,11 @@ if __name__ == '__main__':
 beginner = Beginner()
 beginner.prepare()
 beginner.render()
-
+beginner.scatter()
+beginner.bar()
+beginner.show_as_image()
+beginner.filled_contour()
+beginner.pie()
+beginner.hist()
+beginner.error_bar()
+beginner.box_plot()
