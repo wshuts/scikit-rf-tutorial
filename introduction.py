@@ -1,5 +1,6 @@
 import numpy as np
 import skrf as rf
+import matplotlib.pyplot as plt
 
 
 class Introduction:
@@ -44,5 +45,9 @@ class Introduction:
         freq_rs_s11_mag_min = ring_slot.f[freq_index]
         print(freq_rs_s11_mag_min)
         print(rs_s11_mag[freq_index])
+
+        rf.stylely()
+        ring_slot.plot_s_db()
+        plt.show()
 
         return
