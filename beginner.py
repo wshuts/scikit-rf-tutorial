@@ -28,22 +28,32 @@ class Beginner:
         self.fig.show()
 
     def bar(self):
-        pass
+        self.X = np.arange(10)
+        self.Y = np.random.uniform(1, 10, 10)
+        self.ax.clear()
+        self.ax.bar(self.X, self.Y)
+        self.fig.show()
 
     def show_as_image(self):
-        pass
+        self.ax.clear()
+        self.fig.show()
 
     def filled_contour(self):
-        pass
+        self.ax.clear()
+        self.fig.show()
 
     def pie(self):
-        pass
+        self.ax.clear()
+        self.fig.show()
 
     def hist(self):
-        pass
+        self.ax.clear()
+        self.fig.show()
 
     def error_bar(self):
-        pass
+        self.ax.clear()
+        self.fig.show()
 
     def box_plot(self):
-        pass
+        self.ax.clear()
+        self.fig.show()
