@@ -47,7 +47,9 @@ class Beginner:
         self.fig.show()
 
     def pie(self):
+        self.Z = np.random.uniform(0, 1, 4)
         self.ax.clear()
+        self.ax.pie(self.Z)
         self.fig.show()
 
     def hist(self):
