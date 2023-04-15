@@ -53,7 +53,10 @@ class Beginner:
         self.fig.show()
 
     def hist(self):
+        generator = np.random.default_rng()
+        self.Z = generator.normal(0, 5, 100)
         self.ax.clear()
+        self.ax.hist(self.Z)
         self.fig.show()
 
     def error_bar(self):
