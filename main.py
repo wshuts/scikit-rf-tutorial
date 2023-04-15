@@ -1,4 +1,5 @@
 # This is a sample Python script.
+from beginner import Beginner
 from introduction import Introduction
 
 
@@ -16,5 +17,10 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
-intro = Introduction()
-intro.run_demo()
+# intro = Introduction()
+# intro.run_demo()
+
+beginner = Beginner()
+beginner.prepare()
+beginner.render()
+
