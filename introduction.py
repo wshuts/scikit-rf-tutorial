@@ -1,6 +1,7 @@
 import numpy as np
 import skrf as rf
 import matplotlib.pyplot as plt
+from skrf.plotting import save_all_figs
 
 
 class Introduction:
@@ -47,7 +48,9 @@ class Introduction:
         print(rs_s11_mag[freq_index])
 
         rf.stylely()
-        ring_slot.plot_s_db()
-        plt.show()
+        # ring_slot.plot_s_db()
+        ring_slot.plot_s_deg(m=0, n=1)
+        # ring_slot.plot_s_smith(lw=2)
+        save_all_figs()
 
         return
