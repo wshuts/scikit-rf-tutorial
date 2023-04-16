@@ -69,3 +69,5 @@ class Beginner:
         self.ax.clear()
         self.ax.boxplot(self.Z)
         self.fig.show()
+        self.fig.savefig("box_plot.png", dpi=300)
+        self.fig.savefig("box_plot.pdf")
