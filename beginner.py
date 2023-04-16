@@ -58,11 +58,14 @@ class Beginner:
         self.fig.show()
 
     def error_bar(self):
-        self.X = np.arange(10)
-        self.Y = self.generator.uniform(1, 10, 10)
+        self.X = np.arange(5)
+        self.Y = self.generator.uniform(0, 1, 5)
         self.ax.clear()
+        self.ax.errorbar(self.X, self.Y, self.Y / 4)
         self.fig.show()
 
     def box_plot(self):
+        self.Z = self.generator.normal(0, 1, (100, 3))
         self.ax.clear()
+        self.ax.boxplot(self.Z)
         self.fig.show()
