@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import skrf as rf
+from skrf import NetworkSet
 from skrf.plotting import save_all_figs
 
 
@@ -74,5 +75,8 @@ class Introduction:
     def run_networkset_demo(self):
         networkset = rf.read_all(self.path, contains='ro')
         print(networkset)
+
+        ro_ns = NetworkSet(networkset, name='ro set')
+        print(ro_ns)
 
         return
