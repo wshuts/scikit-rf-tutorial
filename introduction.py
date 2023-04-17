@@ -79,4 +79,19 @@ class Introduction:
         ro_ns = NetworkSet(networkset, name='ro set')
         print(ro_ns)
 
+        mean_s_network = ro_ns.mean_s
+        print(mean_s_network)
+
+        std_s_network = ro_ns.std_s
+        print(std_s_network)
+
+        rf.stylely()
+
+        fig1, ax1 = plt.subplots()
+        std_s_network.plot_s_mag(label='S11', ax=ax1)
+        ax1.set_title('Standard Deviation of RO')
+        ax1.set_ylabel('Standard Deviation')
+
+        save_all_figs()
+
         return
