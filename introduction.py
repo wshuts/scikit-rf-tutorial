@@ -92,6 +92,10 @@ class Introduction:
         ax1.set_title('Standard Deviation of RO')
         ax1.set_ylabel('Standard Deviation')
 
+        fig2, ax2 = plt.subplots()
+        ro_ns.plot_uncertainty_bounds_s_db(label='S11', ax=ax2)
+        ax2.set_title('Uncertainty Bounds')
+
         save_all_figs()
 
         return
