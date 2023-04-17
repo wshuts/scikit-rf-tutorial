@@ -18,7 +18,9 @@ if __name__ == '__main__':
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 intro = Introduction()
-intro.run_demo()
+intro.run_networks_demo()
+intro.run_plotting_demo()
+intro.run_networkset_demo()
 
 # beginner = Beginner()
 # beginner.prepare()
