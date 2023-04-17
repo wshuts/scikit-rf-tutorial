@@ -1,5 +1,5 @@
 # This is a sample Python script.
-from beginner import Beginner
+# from beginner import Beginner
 from introduction import Introduction
 
 
@@ -14,22 +14,23 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    # print_hi('PyCharm')
+    intro = Introduction()
+    # intro.run_networks_demo()
+
+    # beginner = Beginner()
+    # beginner.prepare()
+    # beginner.render()
+    # beginner.scatter()
+    # beginner.bar()
+    # beginner.show_as_image()
+    # beginner.filled_contour()
+    # beginner.pie()
+    # beginner.hist()
+    # beginner.error_bar()
+    # beginner.box_plot()
+    # intro.run_plotting_demo()
+
+    intro.run_networkset_demo()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
-intro = Introduction()
-intro.run_networks_demo()
-intro.run_plotting_demo()
-intro.run_networkset_demo()
-
-# beginner = Beginner()
-# beginner.prepare()
-# beginner.render()
-# beginner.scatter()
-# beginner.bar()
-# beginner.show_as_image()
-# beginner.filled_contour()
-# beginner.pie()
-# beginner.hist()
-# beginner.error_bar()
-# beginner.box_plot()
