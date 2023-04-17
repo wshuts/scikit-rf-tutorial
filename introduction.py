@@ -7,8 +7,8 @@ from skrf.plotting import save_all_figs
 class Introduction:
 
     def __init__(self):
-        path = 'venv/Lib/site-packages/skrf/data/'
-        self.ring_slot = rf.Network(path + 'ring slot.s2p')
+        self.path = 'venv/Lib/site-packages/skrf/data/'
+        self.ring_slot = rf.Network(self.path + 'ring slot.s2p')
 
     def run_networks_demo(self):
         print(self.ring_slot)
@@ -71,7 +71,8 @@ class Introduction:
 
         return
 
-    @staticmethod
-    def run_networkset_demo():
+    def run_networkset_demo(self):
+        networkset = rf.read_all(self.path, contains='ro')
+        print(networkset)
 
         return
